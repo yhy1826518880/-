@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=2, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <button>创建并追加元素</button>
+  <ul>
+    <li id="first">我是里li</li>
+  </ul>
+  <script>
+    // 获取按钮
+    var btn = document.querySelector('button');
+    // 获取ul
+    var ul = document.querySelector('ul');
+    // 获取第一个li
+    var firstLi = ul.children[0];
+    // 给第一个li注册点击事件
+    firstLi.onclick = function() {
+      // this 第一个li
+      alert(this.innerText);
+    }
+    // 给按钮注册点击事件
+    btn.onclick = function() {
+      // 创建li元素
+     var newLi = document.createElement('li');
+     newLi.innerHTML = '我是新来的';
+     // 把新的li元素追加到ul中的最后一个
+     ul.appendChild(newLi);
+    };
+  </script>
+</body>
+</html>
