@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var a = ['a', 'b', 'c'];
+        // var b = ['c', 'd', 'e'];
+        // var c = a.concat(b);
+        // console.log(c);
+
+
+        // var string = 'a,b,c,d,e,f,g';
+        // var Array = string.split();  //字符串转数组 对象.split()
+        // console.log(Array); 
+
+        
+        // var c = Array("a","b","c");
+        // console.log(c.join());
+
+        // var c = Array('a','b');
+        // console.log(c.join());  //数组的join: 将数组的每个元素都转为字符串
+        
+
+        // console.log( undefined || 1);  //1
+
+        //  console.log( null || NaN )  //NaN
+
+        //  console.log( 0 && 1 )  //0
+
+        //   console.log( 0 && 1 || 0 )  //0
+
+        //   var foo = 1;
+        //   function fn() {
+        //       console.log(foo);   // undfinde
+        //       var foo = 2;
+        //       console.log(foo);   // 2 
+        //   }
+        //   fn ();
+
+
+        //  闭包
+
+        // 1) 函数嵌套函数   2)子函数是父函数的  3)子函数使用父函数的局部变量 
+        // function foo() {
+        //     var a = 10;
+        //     return function() {
+        //         return ++a;
+        //     }
+        // };
+        // var c = foo();
+        // console.log(c());  //11
+        // console.log(c());  //12
+        // console.log(c());  //13
+        // console.log(c());  //14
+        // console.log(c());  //15
+
+        //作用: 延长局部变量的生命周期   (2)保密
+        //缺点: 可能会造成内存泄漏
+
+        //原型   原型 = 构造函数.prototype  = 实列对象. _ _ proto _ _ ;
+        //原型._ _ proto _ _ = object.prototype;
+        
+        
+        // function Person() {
+        //     this.name = '人类';
+        //     this.age = 18;
+        //     this.gender = '男';
+        //     this.sayHi = function () {
+        //         console.log('你好');
+        //     };
+        // }
+
+        // var p1 = new Person();
+        // console.log(p1.name);
+        // var p2 = new Person();
+        // console.log(p2.sayHi());
+
+        // var p3 = new Person();  //Person.prototype  > object.prototype 
+        // console.log(p3.age);
+        
+        // console.log(p3.__proto__ );
+
+        // console.log(p3.constructor);
+
+
+        // function person(name, age, gender) {
+        //     this.name = name;
+        //     this.age = age;
+        //     this.gender = gender;
+        // }
+
+        // person.prototype.sayHai = function () {
+        //     console.log('你好');
+        // }
+
+        // function Student(name, age, gender, stuId) {
+        //     this.stuId = stuId;
+        //     var obj = this;
+        //     person.call(obj, name, age, gender);
+        // }
+        // Student.prototype = person.prototype;
+
+        // var stu1 = new Student('张三',18,'男','10086');
+        
+        // console.log(stu1);
+        // stu1.sayHai();
+        // console.log(stu1.name);
+
+    </script>
+
+    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readystate  == 4) {
+                alert(xhr.responseText);
+            }
+        }
+        xhr.open('get', 'index.php', true);
+        xhr.send();
+    
+        var xhr = new XMLHttpRequesgt();
+        xhr.onreadystatechange = function() {
+            if(xhr.readyState == 4) {
+                alert(xhr.reponseText);
+            }
+        }
+        xhr.open('post', 'index.php');
+        var msg = 'n=' + name + '&p=' + pwd;
+        xhr.setRequestHeader('content-type','application/x-www-form-urlencoded');
+        xhr.send(msg);
+    
+    
+    </script>
+
+    
+</body>
+
+</html>
