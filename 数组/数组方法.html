@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // var numbers = [5, 458, 120, -215];
+        // var maxInNumbers = Math.max.apply(this, numbers);
+        // console.log(maxInNumbers);  // 458
+
+
+
+
+        // var maxInNumbers = Math.max.call(this, 5, 458, 120, -215);
+        // console.log(maxInNumbers);  // 458
+
+
+
+
+        function teacher(name) {
+            this.name = name;
+        }
+        teacher.prototype.sayName = function () {
+            console.log("name is " + this.name);
+        }
+        var teacher1 = new teacher("xiaoming");
+        teacher1.sayName();
+
+        function student(name) {
+            this.name = name;
+        }
+        student.prototype = new teacher()
+        var student1 = new student("xiaolan");
+        student1.sayName();
+
+
+
+
+
+    </script>
+</body>
+
+</html>

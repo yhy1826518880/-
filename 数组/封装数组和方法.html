@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+    // var arrs = [11,22,33,44,55,66];
+    // this作为对象的方法调用时,指向调用对象 
+    Array.prototype.getSum = function() {
+        var sum = 0;
+        for(var i = 0; i < this.length; i++) {
+            sum = sum + this[i];
+        }
+        return sum;
+    };
+    // console.log(arrs);
+    // var arr = arrs.getSum(); 
+    // console.log(arr);
+
+    var arrs = [1,2,3,4];
+    console.log(arrs.getSum());
+
+    var arrs = [3,3,4,10];
+    console.log(arrs.getSum());
+    </script> -->
+
+   
+
+
+<script>
+
+        // var arrs = [1,2,3,4,10];
+        // Array.prototype.getSum = function() {
+        //w3e    var sum = 0;
+        //     for (var i = 0,i < arrs.length, i++) {
+        //         sum = sum + arrs[i];
+        //     }
+        //     return sum;
+        // };
+        // var a  = arrs.getSum();
+        // console.log(a);
+
+
+        // Array.prototype.getSum = function () {
+        //     var sum = 0;
+        //     for (var i = 0; i < this.length; i++) {
+        //         sum = sum + this[i];
+        //     }
+        //     return sum;
+        // }
+        
+        // var arrs = [3,7,10,20,30];
+        // console.log(arrs.getSum());
+
+
+        Array.prototype.getSum = function () {
+            var sum = 0;
+            for(var i = 0; i < this.length; i++ ) {
+                sum = sum + this[i];
+            }
+            return sum;
+        }
+        var arrs = [20,80,100];
+        console.log(arrs.getSum());
+
+
+
+        Array.prototype.getSum = function () {
+            var sum = 0;
+            for(var i = 0; i < this.length; i++) {
+                sum = sum + this[i];
+            }
+            return sum;
+        }
+        arrs = [100, 200, 300];
+        console.log(arrs.getSum());
+
+</script>
+   
+    
+</body>
+</html>
